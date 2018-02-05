@@ -3,7 +3,7 @@
  */
 public class Empoisonnement extends Sort {
     int nb;
-    public Empoisonnement(int _cout, int _dgt, int nb){
+    public Empoisonnement(){
         this.nb=0;
         this.cout=2;
         this.dgt=2;

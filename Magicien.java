@@ -10,5 +10,8 @@ public abstract class Magicien extends Personnage {
         if (magie>=tabSorts[random].getCout()){
             tabSorts[random].lancerSort(personnage);
         }
+        else{
+            System.out.println("Vous n'avez pas assez de magie");
+        }
     }
 }

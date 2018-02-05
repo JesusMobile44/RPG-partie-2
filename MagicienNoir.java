@@ -2,7 +2,7 @@
  * Created by BelSi1731422 on 2018-02-01.
  */
 public class MagicienNoir extends Magicien{
-    public MagicienNoir(int _pv, int _def, String _nom, int magie) {
+    public MagicienNoir() {
         this.pv= 60;
         this.def=1;
         this.nom="Magicien Noir";
