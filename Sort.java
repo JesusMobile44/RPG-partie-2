@@ -4,6 +4,16 @@
 public abstract class Sort{
     int cout;
     int dgt;
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    String nom;
     public abstract void lancerSort(Personnage personnage);
 
     public int getCout() {

@@ -7,7 +7,7 @@ public class MagicienNoir extends Magicien{
         this.def=1;
         this.nom="Magicien Noir";
         this.magie=50;
-        tabSorts[0] = new BouledeFeu(5,5);
-        tabSorts[1] = new PicdeGlace(5,7);
+        tabSorts[0] = new BouledeFeu();
+        tabSorts[1] = new PicdeGlace();
     }
 }

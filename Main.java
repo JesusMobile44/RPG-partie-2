@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int choix;
-        Personnage combattant[] = new Personnage[2];
+        boolean nulle = false;
+        Personnage combattant[]= new Personnage[2];
         boolean fini = false;
         Scanner sc = new Scanner(System.in);
 
@@ -75,6 +76,20 @@ public class Main {
                     System.out.println("Choisi une option valide >:^(");
             }
         }
-
+        while (combattant[0].getPv()>0&&combattant[1].getPv()>0||nulle==false){
+            for (int i=0;i<2;i++){
+                if (i==0){
+                    combattant[0].attaquer(combattant[1]);
+                }
+                else if (i==1){
+                    combattant[1].attaquer(combattant[0]);
+                }
+                if (combattant[0] instanceof Magicien && combattant[1] instanceof Magicien &&((Magicien)combattant[0]).magie<2 && ((Magicien)combattant[1]).magie<2){
+                    System.out.println("Le "+combattant[0].getNom()+" et le "+combattant[1]+" n'ont plus de magie!");
+                    System.out.println("Il fuit comme des lâches >:^(");
+                    nulle=true;
+                }
+            }
+        }
     }
 }
