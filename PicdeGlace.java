@@ -6,7 +6,7 @@ public class PicdeGlace extends Sort{
         this.cout=5;
         this.dgt=7;
     }
-    public void lancerSort(){
-
+    public void lancerSort(Personnage personnage){
+        personnage.setPv(personnage.getPv()-(dgt-personnage.getDef()));
     }
 }

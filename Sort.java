@@ -4,7 +4,7 @@
 public abstract class Sort{
     int cout;
     int dgt;
-    public abstract void lancerSort();
+    public abstract void lancerSort(Personnage personnage);
 
     public int getCout() {
         return cout;

@@ -4,7 +4,11 @@
 public abstract class Magicien extends Personnage {
     Sort tabSorts[] = new Sort[2];
     protected int magie;
-    public void attaquer(Personnage personnage){
 
+    public void attaquer(Personnage personnage){
+        int random = (int)(Math.random()*1);
+        if (magie>=tabSorts[random].getCout()){
+            tabSorts[random].lancerSort(personnage);
+        }
     }
 }

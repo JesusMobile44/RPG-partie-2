@@ -6,7 +6,7 @@ public class BouledeFeu extends Sort {
         this.cout=5;
         this.dgt=5;
     }
-    public void lancerSort(){
-
+    public void lancerSort(Personnage personnage){
+        personnage.setPv(personnage.getPv()-dgt);
     }
 }
