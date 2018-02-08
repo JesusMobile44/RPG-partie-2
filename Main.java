@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int choix;
-        boolean nulle = false;
+        boolean gameOver = false;
         Personnage combattant[]= new Personnage[2];
         boolean fini = false;
         Scanner sc = new Scanner(System.in);
@@ -25,17 +25,17 @@ public class Main {
                     fini=true;
                     break;
                 case 2:
-                    Personnage paladin1 = new Barbare();
+                    Personnage paladin1 = new Paladin();
                     combattant[0]=paladin1;
                     fini=true;
                     break;
                 case 3:
-                    Personnage magicienNoir1 = new Barbare();
+                    Personnage magicienNoir1 = new MagicienNoir();
                     combattant[0]=magicienNoir1;
                     fini=true;
                     break;
                 case 4:
-                    Personnage magicienRouge1 = new Barbare();
+                    Personnage magicienRouge1 = new MagicienRouge();
                     combattant[0]=magicienRouge1;
                     fini=true;
                     break;
@@ -58,17 +58,17 @@ public class Main {
                     fini=true;
                     break;
                 case 2:
-                    Personnage paladin2 = new Barbare();
+                    Personnage paladin2 = new Paladin();
                     combattant[1]=paladin2;
                     fini=true;
                     break;
                 case 3:
-                    Personnage magicienNoir2 = new Barbare();
+                    Personnage magicienNoir2 = new MagicienNoir();
                     combattant[1]=magicienNoir2;
                     fini=true;
                     break;
                 case 4:
-                    Personnage magicienRouge2 = new Barbare();
+                    Personnage magicienRouge2 = new MagicienRouge();
                     combattant[1]=magicienRouge2;
                     fini=true;
                     break;
@@ -76,18 +76,32 @@ public class Main {
                     System.out.println("Choisi une option valide >:^(");
             }
         }
-        while (combattant[0].getPv()>0&&combattant[1].getPv()>0||nulle==false){
+        while (combattant[0].getPv()>0&&combattant[1].getPv()>0&&gameOver==false){
             for (int i=0;i<2;i++){
                 if (i==0){
                     combattant[0].attaquer(combattant[1]);
+                    if (combattant[1].getPv()<=0){
+                        System.out.println("");
+                        System.out.println("Le "+combattant[1].getNom()+" est mort, le "+combattant[0].getNom()+" a gagné!!!!!!");
+                        i=2;
+                        gameOver=true;
+                    }
                 }
                 else if (i==1){
                     combattant[1].attaquer(combattant[0]);
+                    if (combattant[0].getPv()<=0){
+                        System.out.println("");
+                        System.out.println("Le "+combattant[0].getNom()+" est mort, le "+combattant[1].getNom()+" a gagné!!!!!!");
+                        i=2;
+                        gameOver=true;
+                    }
                 }
                 if (combattant[0] instanceof Magicien && combattant[1] instanceof Magicien &&((Magicien)combattant[0]).magie<2 && ((Magicien)combattant[1]).magie<2){
+                    System.out.println("");
                     System.out.println("Le "+combattant[0].getNom()+" et le "+combattant[1]+" n'ont plus de magie!");
-                    System.out.println("Il fuit comme des lâches >:^(");
-                    nulle=true;
+                    System.out.println("Ils fuient comme des lâches >:^(");
+                    i=2;
+                    gameOver=true;
                 }
             }
         }

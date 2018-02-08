@@ -6,10 +6,11 @@ public class Empoisonnement extends Sort {
     public Empoisonnement(){
         this.nb=0;
         this.cout=2;
-        this.dgt=2;
+        this.dgt=0;
         this.nom="Empoisonnement";
     }
     public void lancerSort(Personnage personnage){
+        dgt=dgt+2;
         personnage.setPv(personnage.getPv()-dgt);
     }
 

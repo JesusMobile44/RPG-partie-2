@@ -6,7 +6,8 @@ public abstract class Magicien extends Personnage {
     protected int magie;
 
     public void attaquer(Personnage personnage){
-        int random = (int)(Math.random()*1);
+        int random = (int)(Math.random()*2);
+        System.out.println("");
         System.out.println("Le "+nom+" attaque!");
         System.out.println("Le "+nom+" lance "+tabSorts[random].getNom()+", ce qui lui coûte "+tabSorts[random].getCout()+" points de magie.");
         if (magie>=tabSorts[random].getCout()){
