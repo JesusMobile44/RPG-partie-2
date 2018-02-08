@@ -7,12 +7,12 @@ import java.util.Scanner;
  * Created by BelSi1731422 on 2018-01-29.
  */
 public class Main {
+    public static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int choix;
         boolean gameOver = false;
         Personnage combattant[] = new Personnage[2];
         boolean fini = false;
-        Scanner sc = new Scanner(System.in);
 
         while (fini != true) {
             System.out.println("Quel est la classe du combattant #1");
@@ -118,5 +118,9 @@ public class Main {
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+    }
+
+    public Personnage choixClasse(){
+
     }
 }
