@@ -1,7 +1,5 @@
 package personnages;
 
-import personnages.Magicien;
-
 import sorts.Empoisonnement;
 import sorts.MortSubite;
 

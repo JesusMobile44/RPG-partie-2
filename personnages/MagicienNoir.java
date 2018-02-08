@@ -1,6 +1,5 @@
 package personnages;
 
-import personnages.Magicien;
 import sorts.BouledeFeu;
 import sorts.PicdeGlace;
 

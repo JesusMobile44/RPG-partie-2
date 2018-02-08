@@ -1,7 +1,4 @@
 package personnages;
-
-import personnages.Guerrier;
-
 /**
  * Created by BelSi1731422 on 2018-01-29.
  */

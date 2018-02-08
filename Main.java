@@ -1,6 +1,4 @@
 import personnages.*;
-import sorts.*;
-import armes.*;
 
 import java.util.Scanner;
 
