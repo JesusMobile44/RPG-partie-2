@@ -1,4 +1,7 @@
 package personnages;
+
+import armes.Contondant;
+
 /**
  * Created by BelSi1731422 on 2018-01-29.
  */
