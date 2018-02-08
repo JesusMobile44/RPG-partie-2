@@ -6,7 +6,7 @@ public class Barbare extends Guerrier {
     public Barbare() {
         this.pv = 100;
         this.def = 3;
-        this.nom = "personnages.Barbare";
+        this.nom = "Barbare";
         this.force = 10;
     }
 }

@@ -10,7 +10,7 @@ public class MagicienRouge extends Magicien {
     public MagicienRouge() {
         this.pv= 60;
         this.def=1;
-        this.nom="personnages.Magicien Rouge";
+        this.nom="Magicien Rouge";
         this.magie=40;
         tabSorts[0] = new Empoisonnement();
         tabSorts[1] = new MortSubite();

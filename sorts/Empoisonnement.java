@@ -11,7 +11,7 @@ public class Empoisonnement extends Sort {
         this.nb=0;
         this.cout=2;
         this.dgt=0;
-        this.nom="sorts.Empoisonnement";
+        this.nom="Empoisonnement";
     }
     public void lancerSort(Personnage personnage){
         dgt=dgt+2;
