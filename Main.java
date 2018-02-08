@@ -1,3 +1,7 @@
+import personnages.*;
+import sorts.*;
+import armes.*;
+
 import java.util.Scanner;
 
 /**
@@ -13,10 +17,10 @@ public class Main {
 
         while(fini!=true){
             System.out.println("Quel est la classe du combattant #1");
-            System.out.println("    1 - Barbare");
-            System.out.println("    2 - Paladin");
-            System.out.println("    3 - Magicien Noir");
-            System.out.println("    4 - Magicien Rouge");
+            System.out.println("    1 - personnages.Barbare");
+            System.out.println("    2 - personnages.Paladin");
+            System.out.println("    3 - personnages.Magicien Noir");
+            System.out.println("    4 - personnages.Magicien Rouge");
             choix=sc.nextInt();
             switch (choix){
                 case 1:
@@ -46,10 +50,10 @@ public class Main {
         fini=false;
         while (fini!=true){
             System.out.println("Quel est la classe du combattant #2");
-            System.out.println("    1 - Barbare");
-            System.out.println("    2 - Paladin");
-            System.out.println("    3 - Magicien Noir");
-            System.out.println("    4 - Magicien Rouge");
+            System.out.println("    1 - personnages.Barbare");
+            System.out.println("    2 - personnages.Paladin");
+            System.out.println("    3 - personnages.Magicien Noir");
+            System.out.println("    4 - personnages.Magicien Rouge");
             choix=sc.nextInt();
             switch (choix){
                 case 1:
