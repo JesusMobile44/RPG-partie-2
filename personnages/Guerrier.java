@@ -8,7 +8,8 @@ public abstract class Guerrier extends Personnage {
     public void attaquer(Personnage personnage) {
         System.out.println("");
         System.out.println("Le "+nom+" attaque!");
-        personnage.setPv(personnage.getPv()-(force*2-personnage.getDef()));
-        System.out.println("Le "+personnage.getNom()+" perd "+(force*2-personnage.getDef())+" point de vie, il lui en reste "+personnage.getPv());
+        personnage.setPv(personnage.getPv()-((force*2)+personnage.ajouteDgt()-personnage.getDef()));
+        System.out.println("Le "+personnage.getNom()+" perd "+((force*2)+personnage.ajouteDgt()-personnage.getDef())+" point de vie, il lui en reste "+personnage.getPv());
     }
+    public abstract int ajouteDgt();
 }

@@ -17,11 +17,13 @@ public abstract class Magicien extends Personnage {
         if (magie>=tabSorts[random].getCout()){
             magie=magie-tabSorts[random].getCout();
             tabSorts[random].lancerSort(personnage);
+            personnage.setPv(personnage.getPv()-ajouteDgt());
         }
         else{
             System.out.println("Vous n'avez pas assez de magie");
         }
         System.out.println("Il lui en reste "+magie);
-        System.out.println("Le "+personnage.getNom()+" perd "+tabSorts[random].getDgt()+" point de vie, il lui en reste "+personnage.getPv());
+        System.out.println("Le "+personnage.getNom()+" perd "+(tabSorts[random].getDgt()+ajouteDgt())+" point de vie, il lui en reste "+personnage.getPv());
     }
+    public abstract int ajouteDgt();
 }

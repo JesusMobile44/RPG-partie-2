@@ -1,5 +1,4 @@
 package sorts;
-
 import personnages.Personnage;
 
 /**
@@ -12,6 +11,6 @@ public class BouledeFeu extends Sort {
         this.nom="Boule de Feu";
     }
     public void lancerSort(Personnage personnage){
-        personnage.setPv(personnage.getPv()-dgt);
+        personnage.setPv(personnage.getPv()-(dgt));
     }
 }
